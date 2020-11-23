@@ -387,7 +387,7 @@ def vgg16(architecture_type, pretrained=False, pretrained_path=None,
              'acol': VggAcol,
              'spg': VggSpg,
              'adl': VggCam,
-             'mymodel47': myModel47}[architecture_type](layers, **kwargs)
+             'ecam': VggECAM}[architecture_type](layers, **kwargs)
     if pretrained:
         model = load_pretrained_model(model, architecture_type,
                                       path=pretrained_path)
